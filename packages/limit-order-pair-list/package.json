@@ -1,0 +1,31 @@
+{
+  "name": "@champagneswap/limit-order-pair-list",
+  "version": "0.2.1",
+  "description": "Token list for limit order pairs",
+  "main": "dist/limit-order.pairlist.json",
+  "scripts": {
+    "test": "mocha",
+    "build": "rimraf dist && mkdir dist && node internal/write.js > dist/limit-order.pairlist.json",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "files": [
+    "dist/limit-order.pairlist.json"
+  ],
+  "author": "Gašper Brvar",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/champagneswap/lists/issues"
+  },
+  "homepage": "https://github.com/champagneswap/lists#readme",
+  "devDependencies": {
+    "@ethersproject/address": "^5.0.2",
+    "@ethersproject/solidity": "^5.3.0",
+    "@champagneswap/sdk": "^5.0.0-canary.23",
+    "chai": "^4.3.4",
+    "mocha": "^9.0.1",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "@champagneswap/default-token-list": "^11.3.0"
+  }
+}
